@@ -2,4 +2,4 @@
 
 Group Members: Pak Alexander
 
-Onimanga is an online manga store.
+OniManga is an online manga store.
