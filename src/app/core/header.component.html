@@ -1,0 +1,25 @@
+<header class="header">
+    <a routerLink="/" class="logo">
+       <span>OniManga</span>
+    </a>
+  
+    <div class="header-right">
+  
+      <div class="auth-box" *ngIf="!authService.isAuthenticated(); else loggedIn">
+        <input [(ngModel)]="username" placeholder="Username" />
+        <input [(ngModel)]="password" placeholder="Password" type="password" />
+        <button (click)="login()">Login</button>
+      </div>
+  
+      <ng-template #loggedIn>
+        <div class="auth-box">
+          <button (click)="logout()">Logout</button>
+        </div>
+      </ng-template>
+  
+      <a routerLink="/cart" class="cart-link">
+        Cart ({{ cartService.getCount() }})
+      </a>
+    </div>
+  </header>
+  
